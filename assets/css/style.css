@@ -1,0 +1,931 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-white: #fff;
+    --color-deepskyblue: deepskyblue;
+    --color-orangered: orangered;
+    --color-darkgrey: #34495e;
+}
+
+::selection {
+    background-color: var(--color-darkgrey);
+    color: var(--color-white);
+}
+
+::-webkit-scrollbar {
+    width: 2.5rem;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.5);
+    background-color: var(--color-darkgrey);
+}
+
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*======================================
+            NAVBAR STYLING
+=========================================*/
+header {
+    position: relative;
+}
+
+nav#navbar {
+    padding: 2.7rem 0;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav#navbar.fixed {
+    position: fixed;
+    background: var(--color-darkgrey);
+}
+
+nav#navbar .navbar-dark {
+    background-color: transparent;
+}
+
+nav#navbar a.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav#navbar button.navbar-toggler {
+    border: 0.1rem solid var(--color-white);
+    color: var(--color-white);
+    transition: all 0.5s ease-in;
+    position: relative;
+    z-index: 20000;
+}
+
+nav#navbar button.navbar-toggler:hover {
+    background-color: var(--color-deepskyblue);
+}
+
+nav#navbar ul li a {
+    color: var(--color-white);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    transition: all 0.5s ease-in;
+    margin-right: 2rem;
+}
+
+nav#navbar ul li a.location {
+    border: 0.1rem solid var(--color-white);
+    border-radius: 5rem;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:focus {
+    color: var(--color-deepskyblue);
+}
+
+/*======================================
+            NAVBAR STYLING ENDS
+=========================================*/
+
+/*======================================
+            SHOWCASE SECTION STARTS
+=========================================*/
+section#showcase {
+    background: url('../images/slider.jpg') center center no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 100vh;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    position: relative;
+}
+
+section#showcase div.showcase-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#showcase div.showcase-content div.icons i {
+    font-size: 3.5rem;
+    margin-right: 0.7rem;
+}
+
+/*======================================
+            TYPED JS CUSTOMIZATION
+=========================================*/
+
+section#showcase div.showcase-content h1,
+span.typed-cursor {
+    font-size: 5rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+span.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+section#showcase div.showcase-content div.heading h1 {
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+}
+
+section#showcase div.showcase-content div.heading h1 .primary {
+    color: var(--color-orangered);
+}
+
+/***************************************************
+             TYPED JS CUSTOMIZATION ENDS 
+**************************************************/
+
+section#showcase div.showcase-content div.cta .btn-1,
+section#showcase div.showcase-content div.cta .btn-2 {
+    padding: 1.3rem 1.8rem;
+    color: var(--color-white);
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    border: 0.2rem solid var(--color-white);
+    transition: all 0.5s ease-in;
+}
+
+section#showcase div.showcase-content div.cta .btn-1 {
+    border-top-left-radius: 1.5rem;
+}
+
+section#showcase div.showcase-content div.cta .btn-1:hover {
+    color: var(--color-white);
+    background-color: var(--color-deepskyblue);
+    border-color: var(--color-deepskyblue);
+}
+
+section#showcase div.showcase-content div.cta .btn-2 {
+    border-bottom-right-radius: 1.5rem;
+}
+
+section#showcase div.showcase-content div.cta .btn-2:hover {
+    color: var(--color-white);
+    background-color: var(--color-orangered);
+    border-color: var(--color-orangered);
+}
+
+section#showcase div.showcase-content div.social-links i {
+    border: 0.1rem solid white;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    margin-right: 0.2rem;
+    transition: all 0.5s ease-in;
+    color: var(--color-white);
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+}
+
+section#showcase div.showcase-content div.social-links i:hover {
+    background-color: var(--color-deepskyblue);
+    color: var(--color-white);
+    border: 0.1rem solid var(--color-deepskyblue);
+}
+
+/*======================================
+           SHOWCASE SECTION ENDS
+=========================================*/
+
+/*======================================
+            SERVICES SECTION Starts
+=========================================*/
+section#services {
+    padding: 6rem 0 6rem 0;
+}
+
+section#services h2.service-heading,
+section#team h2.team-heading {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+section#services p.services-para,
+section#team p.team-para {
+    font-weight: 300;
+}
+
+section#services div.services-col {
+    margin-bottom: 2rem;
+}
+
+section#services div.card {
+    min-height: 25rem;
+    position: relative;
+    z-index: 10;
+}
+
+section#services div.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    transform-origin: top left;
+    background-color: var(--color-darkgrey);
+}
+
+section#services div.card:hover::before {
+    transform: scaleX(1);
+}
+
+section#services div.card:hover div.card-body {
+    color: var(--color-white);
+}
+
+section#services div.card:hover div.card-body i {
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+section#services div.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+section#services div.card-body i {
+    font-size: 3rem;
+}
+
+section#services div.card-body h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+section#services div.card-body p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+/*======================================
+           WORK SECTION CSS
+=========================================*/
+div.work-row div.col-lg-3 {
+    position: relative;
+    overflow: hidden;
+}
+
+div.work-row div.col-lg-3 a img:hover {
+    transform: scale(1.5);
+    cursor: zoom-in;
+    filter: sepia(100%);
+    transition: all 0.8s ease;
+}
+
+/*======================================
+           Team SECTION CSS
+=========================================*/
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--color-darkgrey) !important;
+}
+
+div.team-member h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+
+div.team-member h4 {
+    color: var(--color-darkgrey);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+div.team-member i {
+    font-size: 2rem;
+    color: #64707b;
+}
+
+div.team-member a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+/*======================================
+           Testimonials SECTION CSS
+=========================================*/
+section#testimonials {
+    background: url('../images/reviews.jpg') center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 10rem;
+}
+
+section#testimonials div.testimonials-heading {
+    padding-top: 10rem;
+}
+
+section#testimonials div.testimonials-heading h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 5rem;
+
+}
+
+section#testimonials div.testimonials-heading h2::after {
+    content: "";
+    position: absolute;
+    width: 3%;
+    height: 0.2rem;
+    background-color: var(--color-white);
+    margin: 0 auto;
+    bottom: -1rem;
+    left: 49%;
+}
+
+section#testimonials img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 0.4rem solid var(--color-orangered);
+}
+
+section#testimonials div.card {
+    border: none;
+}
+
+section#testimonials h3.client-name {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+section#testimonials h4.client-designation {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+section#testimonials p.client-review {
+    font-size: 1.5rem;
+    padding: 0 10rem 0 10rem;
+}
+
+/*======================================
+            FAQS SECTION CSS
+=========================================*/
+section#faqs h2.faqs-heading,
+section#blog h2.blog-heading,
+section#contact-us h2.contact-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 5rem;
+}
+
+section#faqs div.accordion-item {
+    margin-bottom: 1rem;
+}
+
+section#faqs p.faqs-para,
+section#blog p.blog-para,
+section#contact-us p.contact-para {
+    margin-bottom: 5rem;
+}
+
+section#faqs div#accordion button.accordion-button {
+    padding: 2.5rem 3.5rem;
+    background-color: var(--color-darkgrey);
+    color: var(--color-white);
+    position: relative;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+section#faqs div#accordion button.accordion-button span {
+    font-size: 2rem;
+}
+
+section#faqs div#accordion button.accordion-button::after {
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 2rem;
+    left: -2rem;
+    color: var(--color-white);
+    background-color: var(--color-darkgrey);
+    border: 0.4rem solid var(--color-white);
+    border-radius: 50%;
+    background-image: none;
+    transition: all 0.5s ease-in-out;
+
+}
+
+section#faqs div#accordion button.accordion-button:not(.collapsed)::after {
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    border: 0.4rem solid var(--color-orangered);
+    color: var(--color-orangered);
+}
+
+section#faqs div#accordion div.accordion-body {
+    background-color: #e0dcdc;
+    padding: 2rem;
+    font-size: 1.4rem;
+    line-height: 2;
+    font-weight: 300;
+}
+
+/*=======================================
+            Video style Starts
+=========================================*/
+section#video {
+    position: relative;
+}
+
+div.video-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+div.video-wrapper video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    filter: brightness(30%);
+}
+
+div.video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+a.video-btn {
+    box-shadow: 0px 0px 0px 20px rgba(0, 167, 221, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 20px rgba(0, 167, 221, 0.5);
+    -moz-box-shadow: 0px 0px 0px 20px rgba(0, 167, 221, 0.5);
+    -o-box-shadow: 0px 0px 0px 20px rgba(0, 167, 221, 0.5);
+    transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    padding: 2rem;
+
+}
+
+a.video-btn i {
+    font-size: 5rem;
+    color: turquoise;
+}
+
+a.video-btn:hover {
+    box-shadow: 0px 0px 15px 20px rgba(0, 84, 111, 0.5);
+    -webkit-box-shadow: 0px 0px 15px 20px rgba(0, 84, 111, 0.5);
+    -moz-box-shadow: 0px 0px 15px 20px rgba(0, 84, 111, 0.5);
+}
+
+/*======================================
+            BLOGS CSS 
+=========================================*/
+section#blog div.card {
+    margin-right: 1rem;
+}
+
+section#blog div.card-body {
+    padding: 0;
+}
+
+section#blog div.card-img-top {
+    position: relative;
+}
+
+section#blog div.card-img-top img {
+    max-height: 23rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+}
+
+section#blog div.card-img-top div.post-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-orangered);
+    padding: 1rem;
+    color: var(--color-white);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+section#blog div.post-sharing {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-darkgrey);
+    padding: 1.5rem;
+}
+
+section#blog i {
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+section#blog i:hover {
+    color: var(--color-deepskyblue);
+    transition: all 0.5s ease-in-out;
+}
+
+section#blog div.blog-post-content {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+section#blog div.blog-post-content a:link,
+section#blog div.blog-post-content a:visited,
+div#careerModal div.modal-body form button {
+    background-color: var(--color-darkgrey);
+    color: var(--color-white);
+    padding: 1rem;
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem 0;
+}
+
+section#blog div.blog-post-content a:hover,
+div#careerModal div.modal-body form button:hover{
+    background-color: #336394;
+}
+
+/*======================================
+            Counter section css
+=========================================*/
+section#stats {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/cover-bg-1.jpg') center fixed no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+section#stats div.stats-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    color: var(--color-white);
+    text-align: center;
+}
+
+section#stats div.stats-content div.counter {
+    flex-basis: 20rem;
+}
+
+section#stats div.stats-content i {
+    font-size: 8.5rem;
+}
+
+section#stats div.stats-content h2 {
+    font-weight: bolder;
+    font-size: 4.2rem;
+    color: deepskyblue;
+}
+
+section#stats div.stats-content p {
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+/*======================================
+            Contact Form Css
+=========================================*/
+section#contact-us form input,
+section#contact-us form textarea {
+    font-size: 1.6rem;
+    padding: 1rem;
+
+}
+
+section#contact-us .form-control {
+    border: 0.1rem solid var(--color-darkgrey);
+    outline: none;
+    box-shadow: none;
+}
+
+section#contact-us .form-control:focus,
+section#contact-us .form-control:active {
+    border: 0.1rem solid var(--color-deepskyblue);
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+section#contact-us button {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.2rem 4.3rem;
+    border: 0.1rem solid black;
+    border-radius: 0;
+    outline: none;
+}
+
+section#contact-us button:hover {
+    background-color: var(--color-darkgrey);
+    color: var(--color-white);
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+
+section#contact-us div.contact-info {
+    display: flex;
+    justify-content: space-around;
+    background: var(--color-darkgrey);
+    overflow: hidden;
+    padding: 3.5rem;
+    flex-wrap: wrap;
+}
+
+section#contact-us div.contact-info div.info {
+    flex-basis: 25rem;
+    margin-bottom: 2rem;
+}
+
+section#contact-us div.contact-info i.fas {
+    color: var(--color-white);
+    font-size: 2.6rem;
+    border: 0.1rem solid var(--color-white);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+
+}
+
+section#contact-us div.info p {
+    color: var(--color-white);
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+section#contact-us div.info p:first-child {
+    margin-bottom: 2rem;
+}
+
+/*======================================
+            MAP SECTION CSS
+=========================================*/
+section#map iframe {
+    width: 100%;
+}
+
+/*======================================
+            Footer CSS
+=========================================*/
+footer#footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Black-Wood-Footer-Background.jpg') center center no-repeat fixed;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+footer#footer div.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer#footer div.footer-content a {
+    margin: 0 16px 20px 16px;
+    display: inline-block;
+    flex-basis: 7rem;
+}
+
+footer#footer div.footer-content i.fab,
+footer#footer div.footer-content i.fas {
+    font-size: 3rem;
+    color: var(--color-deepskyblue);
+    width: 8rem;
+    height: 8rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background: white;
+    line-height: 2;
+    border: 1rem solid var(--color-darkgrey);
+    text-align: center;
+    transition: all 0.7s ease-in;
+}
+
+footer#footer div.footer-content a:hover i {
+    border: 1rem solid var(--color-white);
+    transform: rotate(360deg);
+}
+
+footer#footer div.copyright {
+    margin-top: 2rem;
+}
+
+footer#footer div.copyright a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 1.7rem;
+    position: relative;
+}
+
+footer#footer div.copyright a.footer-brand:after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 25%;
+    width: 30%;
+    height: 0.4rem;
+    background-color: var(--color-white);
+    border-radius: 4rem;
+}
+
+footer#footer div.copyright p {
+    margin-top: 2.5rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+/*======================================
+            Resume Modal
+=========================================*/
+div#careerModal div.modal-header {
+    background-color: var(--color-darkgrey);
+    color: var(--color-white);
+    padding: 2rem;
+}
+
+div#careerModal div.modal-body {
+    padding: 2rem;
+}
+
+div#careerModal div.modal-body p.caution {
+    font-size: 1.5rem;
+    color: var(--color-darkgrey);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+div#careerModal div.modal-body form input:not(.form-check-input, .form-file) {
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+div#careerModal div.modal-body form label, div#careerModal div.modal-body form p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+div#careerModal div.modal-body form button {
+    margin-bottom: 0;
+}
+
+div#careerModal div.modal-footer {
+   background-color: var(--color-darkgrey);
+   padding: 1rem;
+   color: var(--color-white);
+}
+
+/*======================================
+            MEDIA QUERIES
+=========================================*/
+@media (max-width:992px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav#navbar {
+        transition: none;
+    }
+
+    nav#navbar div.collapse.show,
+    nav#navbar div.collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    nav#navbar ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav#navbar ul li {
+        margin-bottom: 2rem;
+    }
+
+    nav#navbar ul li a {
+        font-size: 2rem;
+    }
+
+    div.video-content {
+        position: absolute;
+        top: 40vh;
+        left: 40vw;
+    }
+}
+
+@media (max-width:550px) {
+
+    section#showcase div.showcase-content h1,
+    span.typed-cursor {
+        font-size: 3rem;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        display: none;
+    }
+}
+
+@media (min-width:551px) and (max-width:700px) {
+
+    section#showcase div.showcase-content h1,
+    span.typed-cursor {
+        font-size: 4rem;
+    }
+}
